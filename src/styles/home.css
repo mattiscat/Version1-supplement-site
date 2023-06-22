@@ -1,0 +1,274 @@
+.home {
+    height: fit-content;
+    font-family: 'Timmana', sans-serif;
+}
+
+.header {
+    background-color: #000000fe;
+    display: flex;
+    color: white;
+    overflow: hidden;
+    height: 600px;
+}
+
+.left-header, .right-header {
+    display: flex;
+    width: 50%;
+    color: #ffffff;
+}
+
+.right-header {
+    position: relative;
+    background-image: url("/public/assets/smoke.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-header-overlay-img {
+    position: absolute;
+    background-image: url("/public/assets/preworkout.png");
+    height: 400px;
+    width: 400px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.left-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 45px;
+}
+
+.left-header h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+
+img {
+    max-height: 400px;
+    max-width: 400px;
+}
+
+.header-button {
+    padding-top: 7px;
+    height: 40px;
+    width: 95px;
+    background-color: #0000ff;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header-button:hover {
+    scale: 1.12;
+    background-color: #fddd29;
+    color: #000000
+}
+
+.iconBanner {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 180px;
+    background-color: #000000;
+    justify-content: space-evenly;
+    border-top: 1px solid #ffffff;
+}
+
+.iconBanner .icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #008000;
+    font-size: 90px;
+    margin-top: 15px;
+}
+
+.icon-text {
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.productsContainer {
+    height: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 45px;
+    padding: 35px;
+    gap: 40px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 470px;
+    width: 400px;
+    background-color: #ffffffde;
+}
+
+.product img {
+    height: 80%;
+    width: 90%;
+}
+
+.product .hover-underline-animation {
+    position: relative;
+    color: #000000;
+    font-size: 2.3rem;
+    margin: 0;
+    cursor: pointer;
+}
+
+.product .hover-underline-animation::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    transform: scaleX(0);
+}
+
+.product .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.additionalContentSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.homeImageContainer {
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: auto;
+}
+
+.image img{
+    flex-shrink: 0;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+
+.imageText {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    width: 50%;
+    margin: 0 25px;
+}
+
+.imageText button {
+    align-self: flex-start;
+    width: 170px;
+    height: 45px;
+    font-size: 1.2rem;
+    color: #000000;
+    background-color: #ffd700;
+    padding-top: 6px;
+    border: 2px solid;
+    border-radius: 7px;
+    margin-top: 20px;
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .header {
+        height: 30vh;
+    }
+    .left-header {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .left-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .left-header button {
+        margin: 15px 0;
+    }
+
+    .right-header {
+        visibility: hidden;
+        width: 0;
+    }
+
+    .home {
+        height: fit-content;
+    }
+
+    .iconBanner .icon {
+        font-size: 60px;      
+    }
+
+    .icon-text {
+        font-size: 2.3rem;
+    }
+
+    .productsContainer {
+        height: fit-content;
+        flex-direction: column;
+    }
+    
+    .product {
+        height: 270px;
+        width: 230px;
+    }
+
+    .product .hover-underline-animation {
+        font-size: 1.5rem;
+    }
+
+    .product .hover-underline-animation::after {
+        height: 2px;
+    }
+
+    .homeImageContainer {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .image {
+        width: 90%;
+    }
+
+    .imageText {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        padding: 10px;
+        margin: 10px;
+        width: 90%;
+    }
+}
+
+

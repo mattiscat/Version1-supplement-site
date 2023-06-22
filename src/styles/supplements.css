@@ -1,0 +1,46 @@
+* {
+    font-family: 'Timmana', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.product-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 25px;
+    margin: 10px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.add-to-cart-button {
+    padding-top: 7px;
+    height: 35px;
+    width: 95px;
+    background-color: blue;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}

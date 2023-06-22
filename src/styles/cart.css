@@ -1,0 +1,142 @@
+.cart-display {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    width: 60%;
+}
+
+
+.left-cart-display {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+    align-items: center;
+}
+
+.cart-item-card {
+    display: flex;
+    align-items: center;
+    min-width: 100%;
+}
+
+.cart-item-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+}
+
+.cart-item-image img {
+    max-height: 70%;
+    max-width: 70%;
+}
+
+.cart-item-info {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.cart-buttons-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-quantity-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.remove-button {
+    padding-top: 5px;
+    margin-top: 5px;
+    background-color: red;
+    color: white;
+    border: 2px solid #000;
+    border-radius: 3%;
+    cursor: pointer;
+}
+
+.cart-item-button {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.cart-item-quantity {
+    width: 30px;
+    height: auto;
+    padding-top: 3px;
+    margin-left: 25px;
+    letter-spacing: 5px;
+}
+
+.cart-item-price {
+    position: absolute;
+    bottom: 0;
+    right: 3%;
+    font-size: 1.2rem;
+}
+
+.checkout {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;;
+}
+
+.cartTotal {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 25px;
+    font-size: 1.5rem;
+}
+
+.checkoutButton {
+    position: relative;
+    left: 26%;
+    width: 120px;
+    height: 40px;
+    background-color: blue;
+    color: white;
+    border-radius: 5%;
+    font-size: 1.2rem;
+    padding-top: 7px;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 700px) {
+    .cart-item-card {
+        flex-direction: column;
+        padding-bottom: 45px;
+    }
+
+    .cartTotal {
+        width: 100%;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .checkoutButton {
+        left: 0;
+    }
+}
