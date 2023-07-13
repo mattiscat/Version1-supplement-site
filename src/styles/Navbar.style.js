@@ -18,12 +18,12 @@ export const LeftContainer = styled.div`
   flex: 30%;
   align-items: center;
   padding-left: 7%;
-  color: gold;
+  color: #f7de1a;
   font-size: 3rem;
   padding-top: 20px;
 
   @media (max-width: 700px) {
-    font-size: 2.3rem;
+    font-size: 1.6em;
   }
 `;
 
@@ -52,6 +52,10 @@ export const NavbarLink = styled(Link)`
   text-decoration: none;
   margin: 10px;
   color: white;
+
+  :hover {
+    color: #f7de1a;
+  }
 
   @media (max-width: 700px) {
     display: none;

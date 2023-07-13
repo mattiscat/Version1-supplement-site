@@ -1,7 +1,8 @@
 import "../styles/home.css";
 import { ElectricBolt, GpsFixed, BatterySaver } from "@mui/icons-material";
+import { NavLink } from "react-router-dom";
 
-export const Home = () => {
+export const Home = ({ setFilter }) => {
   return (
     <div className="home">
       <div className="header">
@@ -9,7 +10,6 @@ export const Home = () => {
           <h1>
             FUEL YOUR BODY <br /> POWER YOUR MIND
           </h1>
-          <button className="header-button">SHOP NOW</button>
         </div>
         <div className="right-header">
           <span className="right-header-overlay-img"></span>
@@ -34,15 +34,36 @@ export const Home = () => {
       <div className="productsContainer">
         <div className="product">
           <img src={"assets/watermelonPreworkout.webp"} alt="pre-workout" />
-          <a className="hover-underline-animation">SHOP PRE-WORKOUT</a>
+          <NavLink
+            to="/supplements"
+            style={{ textDecoration: "none" }}
+            onClick={() => setFilter("pre-workout")}
+            className="hover-underline-animation"
+          >
+            SHOP PRE-WORKOUT
+          </NavLink>
         </div>
         <div className="product">
           <img src={"assets/protein.webp"} alt="protein" />
-          <a className="hover-underline-animation">SHOP PROTEIN</a>
+          <NavLink
+            to="/supplements"
+            style={{ textDecoration: "none" }}
+            onClick={() => setFilter("protein")}
+            className="hover-underline-animation"
+          >
+            SHOP PROTEIN
+          </NavLink>
         </div>
         <div className="product">
           <img src={"assets/EAAs.webp"} alt="amino" />
-          <a className="hover-underline-animation">SHOP AMINOS</a>
+          <NavLink
+            to="/supplements"
+            style={{ textDecoration: "none" }}
+            onClick={() => setFilter("aminos")}
+            className="hover-underline-animation"
+          >
+            SHOP AMINOS
+          </NavLink>
         </div>
       </div>
       <div className="additionalContentSection">
@@ -52,27 +73,31 @@ export const Home = () => {
           </div>
           <span className="imageText">
             <h2>BECOME THE BEST VERSION OF YOURSELF</h2>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
             <button>Join Our Team</button>
           </span>
         </div>
         <hr />
         <div className="homeImageContainer">
           <span className="imageText">
-            <h2>SUBSCRIPBE TO STAY UP TO DATE</h2>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            <h2>SUBSCRIBE TO STAY UP TO DATE</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
             <button>Subscribe</button>
           </span>
           <div className="image">

@@ -1,16 +1,15 @@
-const express = require("express");
-var cors = require("cors");
-const stripe = require("stripe")(
-  "sk_test_51NJr81Bd2GJ83GlcEmjITnq6Nt05zizFmWcXcaoPQEELppd1KdD3OWfkS5GhGer4mm2PmMCGyRkkmZCnWJv5QN0c00wzhGTjW0"
-);
+require("dotenv").config();
 
+var cors = require("cors");
+const express = require("express");
 const app = express();
 app.use(cors());
 app.use(express.static("public"));
 app.use(express.json());
 
+const stripe = require("stripe")(process.env.REACT_APP_SECRET_KEY);
+
 app.post("/checkout", async (req, res) => {
-  console.log(req.body);
   const items = req.body.items;
   let lineItems = [];
   items.forEach((item) => {

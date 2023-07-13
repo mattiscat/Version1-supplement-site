@@ -1,0 +1,15 @@
+.mainContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContainer span {
+    font-size: 64px;
+}
+
+.mainContainer .icon {
+    font-size: 200px;
+}

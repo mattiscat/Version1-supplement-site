@@ -119,6 +119,7 @@ img {
     background-color: #ffffffde;
 }
 
+
 .product img {
     height: 80%;
     width: 90%;
@@ -183,6 +184,11 @@ img {
     padding: 25px;
     width: 50%;
     margin: 0 25px;
+    font-size: 1.3em;
+}
+
+.imageText p {
+    color: #757272
 }
 
 .imageText button {
@@ -192,10 +198,11 @@ img {
     font-size: 1.2rem;
     color: #000000;
     background-color: #ffd700;
-    padding-top: 6px;
+    padding-top: 8px;
     border: 2px solid;
     border-radius: 7px;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 

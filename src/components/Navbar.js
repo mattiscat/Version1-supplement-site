@@ -12,17 +12,41 @@ import {
 } from "../styles/Navbar.style";
 import { useState } from "react";
 
-export const Navbar = ({ items }) => {
+export const Navbar = ({ items, setFilter }) => {
   const [extendNavbar, setExtendNavbar] = useState(false);
 
   return (
     <NavbarContainer extendNavbar={extendNavbar}>
       <NavbarInner>
-        <LeftContainer>Version 1</LeftContainer>
+        <LeftContainer>
+          <h1
+            style={{
+              fontFamily: "Beau Rivage, cursive",
+              letterSpacing: "3px",
+              color: "#fff",
+              marginRight: "15px",
+              paddingBottom: "10px",
+              fontSize: "48px",
+            }}
+          >
+            Version
+          </h1>
+          <b
+            style={{
+              fontFamily: "Beau Rivage, cursive",
+              paddingBottom: "10px",
+              fontSize: "1.3em",
+            }}
+          >
+            1
+          </b>
+        </LeftContainer>
         <RightContainer>
           <NavbarLinksContainer>
             <NavbarLink to="/">Home</NavbarLink>
-            <NavbarLink to="/supplements">Supplements</NavbarLink>
+            <NavbarLink to="/supplements" onClick={() => setFilter("all")}>
+              Supplements
+            </NavbarLink>
             <NavbarLink to="/cart">
               Cart
               {items > 0 && <CartCount>{items}</CartCount>}
@@ -40,7 +64,10 @@ export const Navbar = ({ items }) => {
           </NavbarLinkExtended>
           <NavbarLinkExtended
             to="/supplements"
-            onClick={() => setExtendNavbar(false)}
+            onClick={() => {
+              setExtendNavbar(false);
+              setFilter("all");
+            }}
           >
             Supplements
           </NavbarLinkExtended>

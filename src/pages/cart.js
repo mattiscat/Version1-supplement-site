@@ -1,8 +1,7 @@
 import "../styles/cart.css";
+import { CartDefault } from "../components/CartDefault";
 
 export const Cart = ({ cartItems, setCartItems }) => {
-
-
   const handleQuantityDecrement = (product) => {
     setCartItems((cartItems) =>
       cartItems.map((item) =>
@@ -16,7 +15,7 @@ export const Cart = ({ cartItems, setCartItems }) => {
   const handleQuantityIncrement = (product) => {
     setCartItems((cartItems) =>
       cartItems.map((item) =>
-        product.id === item.id ? { ...item, quantity: item.quantity + 1} : item
+        product.id === item.id ? { ...item, quantity: item.quantity + 1 } : item
       )
     );
   };
@@ -28,37 +27,40 @@ export const Cart = ({ cartItems, setCartItems }) => {
 
   const getCartTotal = () => {
     let cartTotal = 0;
-    cartItems.map((product) => { 
-      cartTotal += (product.price * product.quantity)
+    cartItems.map((product) => {
+      cartTotal += product.price * product.quantity;
     });
     return cartTotal;
   };
 
   const checkout = async () => {
-    await fetch('http://localhost:4000/checkout', {
+    await fetch("http://localhost:4000/checkout", {
       method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify({items: cartItems})
-    }).then((response) => {
-      return response.json();
-    }).then((response) => {
-      if(response.url) {
-        window.location.assign(response.url);
-      }
+      body: JSON.stringify({ items: cartItems }),
     })
-  }
+      .then((response) => {
+        return response.json();
+      })
+      .then((response) => {
+        if (response.url) {
+          window.location.assign(response.url);
+        }
+      });
+  };
 
-  return (
-    cartItems.length === 0 ? <h1>Your Cart is Empty!</h1> :
+  return cartItems.length === 0 ? (
+    <CartDefault />
+  ) : (
     <div className="cart-display">
       <div className="left-cart-display">
         {cartItems.map((item) => (
           <div className="cart-item" key={item.id}>
             <div className="cart-item-card">
               <div className="cart-item-image">
-                <img src={item.image} />
+                <img src={item.image} alt="#" />
               </div>
               <div className="cart-item-info">
                 <h3>{item.name}</h3>
@@ -86,18 +88,16 @@ export const Cart = ({ cartItems, setCartItems }) => {
                   REMOVE
                 </button>
               </div>
-              <span className="cart-item-price">
-                ${item.price}
-              </span>
+              <span className="cart-item-price">${item.price}</span>
             </div>
           </div>
         ))}
       </div>
       <div className="checkout">
-        <div className="cartTotal">
-          Total: ${getCartTotal().toFixed(2)}
-        </div>
-        <button className="checkoutButton" onClick={checkout}>CHECKOUT</button>
+        <div className="cartTotal">Total: ${getCartTotal().toFixed(2)}</div>
+        <button className="checkoutButton" onClick={checkout}>
+          CHECKOUT
+        </button>
       </div>
     </div>
   );

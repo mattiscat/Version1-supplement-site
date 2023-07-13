@@ -10,6 +10,7 @@ import { Cancel } from "./pages/cancel";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
+  const [filterCategory, setFilterCategory] = useState("all");
 
   const AddToCart = (supplement) => {
     let isAdded = false;
@@ -29,16 +30,20 @@ function App() {
       },
     ]);
   };
-
   return (
     <div className="App">
       <Router>
-        <Navbar items={cartItems.length} />
+        <Navbar items={cartItems.length} setFilter={setFilterCategory} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home setFilter={setFilterCategory} />} />
           <Route
             path="/supplements"
-            element={<Supplements AddToCart={AddToCart} />}
+            element={
+              <Supplements
+                AddToCart={AddToCart}
+                filterCategory={filterCategory}
+              />
+            }
           />
           <Route
             path="/cart"
