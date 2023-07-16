@@ -43,11 +43,14 @@ export const Navbar = ({ items, setFilter }) => {
         </LeftContainer>
         <RightContainer>
           <NavbarLinksContainer>
-            <NavbarLink to="/">Home</NavbarLink>
-            <NavbarLink to="/supplements" onClick={() => setFilter("all")}>
+            <NavbarLink to="/Version1-supplement-site">Home</NavbarLink>
+            <NavbarLink
+              to="/Version1-supplement-site/supplements"
+              onClick={() => setFilter("all")}
+            >
               Supplements
             </NavbarLink>
-            <NavbarLink to="/cart">
+            <NavbarLink to="/Version1-supplement-site/cart">
               Cart
               {items > 0 && <CartCount>{items}</CartCount>}
             </NavbarLink>
@@ -59,11 +62,14 @@ export const Navbar = ({ items, setFilter }) => {
       </NavbarInner>
       {extendNavbar && (
         <NavbarExtended>
-          <NavbarLinkExtended to="/" onClick={() => setExtendNavbar(false)}>
+          <NavbarLinkExtended
+            to="/Version1-supplement-site"
+            onClick={() => setExtendNavbar(false)}
+          >
             Home
           </NavbarLinkExtended>
           <NavbarLinkExtended
-            to="/supplements"
+            to="/Version1-supplement-site/supplements"
             onClick={() => {
               setExtendNavbar(false);
               setFilter("all");
@@ -71,7 +77,10 @@ export const Navbar = ({ items, setFilter }) => {
           >
             Supplements
           </NavbarLinkExtended>
-          <NavbarLinkExtended to="/cart" onClick={() => setExtendNavbar(false)}>
+          <NavbarLinkExtended
+            to="/Version1-supplement-site/cart"
+            onClick={() => setExtendNavbar(false)}
+          >
             Cart
           </NavbarLinkExtended>
         </NavbarExtended>

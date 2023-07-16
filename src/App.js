@@ -35,9 +35,12 @@ function App() {
       <Router>
         <Navbar items={cartItems.length} setFilter={setFilterCategory} />
         <Routes>
-          <Route path="/" element={<Home setFilter={setFilterCategory} />} />
           <Route
-            path="/supplements"
+            path="/Version1-supplement-site"
+            element={<Home setFilter={setFilterCategory} />}
+          />
+          <Route
+            path="/Version1-supplement-site/supplements"
             element={
               <Supplements
                 AddToCart={AddToCart}
@@ -46,11 +49,14 @@ function App() {
             }
           />
           <Route
-            path="/cart"
+            path="/Version1-supplement-site/cart"
             element={<Cart cartItems={cartItems} setCartItems={setCartItems} />}
           />
-          <Route path="/success" element={<Success />} />
-          <Route path="/cancel" element={<Cancel />} />
+          <Route
+            path="/Version1-supplement-site/success"
+            element={<Success />}
+          />
+          <Route path="/Version1-supplement-site/cancel" element={<Cancel />} />
         </Routes>
       </Router>
     </div>
