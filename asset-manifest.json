@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Version1-supplement-site/static/css/main.c49e4b01.css",
-    "main.js": "/Version1-supplement-site/static/js/main.2fc84ea9.js",
+    "main.js": "/Version1-supplement-site/static/js/main.da74892b.js",
     "static/media/preworkout.png": "/Version1-supplement-site/static/media/preworkout.0bb2f9b3e3b70fc66e3a.png",
     "static/media/smoke.jpg": "/Version1-supplement-site/static/media/smoke.a9236645d258a07cd910.jpg",
     "index.html": "/Version1-supplement-site/index.html",
     "main.c49e4b01.css.map": "/Version1-supplement-site/static/css/main.c49e4b01.css.map",
-    "main.2fc84ea9.js.map": "/Version1-supplement-site/static/js/main.2fc84ea9.js.map"
+    "main.da74892b.js.map": "/Version1-supplement-site/static/js/main.da74892b.js.map"
   },
   "entrypoints": [
     "static/css/main.c49e4b01.css",
-    "static/js/main.2fc84ea9.js"
+    "static/js/main.da74892b.js"
   ]
 }
