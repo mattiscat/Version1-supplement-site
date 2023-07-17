@@ -33,9 +33,9 @@ export const Home = ({ setFilter }) => {
 
       <div className="productsContainer">
         <div className="product">
-          <img src={"assets/watermelonPreworkout.webp"} alt="pre-workout" />
+          <img src={"./assets/watermelonPreworkout.webp"} alt="pre-workout" />
           <NavLink
-            to="/supplements"
+            to="/Version1-supplement-site/supplements"
             style={{ textDecoration: "none" }}
             onClick={() => setFilter("pre-workout")}
             className="hover-underline-animation"
@@ -44,9 +44,9 @@ export const Home = ({ setFilter }) => {
           </NavLink>
         </div>
         <div className="product">
-          <img src={"assets/protein.webp"} alt="protein" />
+          <img src={"./assets/protein.webp"} alt="protein" />
           <NavLink
-            to="/supplements"
+            to="/Version1-supplement-site/supplements"
             style={{ textDecoration: "none" }}
             onClick={() => setFilter("protein")}
             className="hover-underline-animation"
@@ -55,9 +55,9 @@ export const Home = ({ setFilter }) => {
           </NavLink>
         </div>
         <div className="product">
-          <img src={"assets/EAAs.webp"} alt="amino" />
+          <img src={"./assets/EAAs.webp"} alt="amino" />
           <NavLink
-            to="/supplements"
+            to="/Version1-supplement-site/supplements"
             style={{ textDecoration: "none" }}
             onClick={() => setFilter("aminos")}
             className="hover-underline-animation"
@@ -69,7 +69,7 @@ export const Home = ({ setFilter }) => {
       <div className="additionalContentSection">
         <div className="homeImageContainer">
           <div className="image">
-            <img src={"assets/homeImage1.jpg"} alt="home page" />
+            <img src={"./assets/homeImage1.jpg"} alt="home page" />
           </div>
           <span className="imageText">
             <h2>BECOME THE BEST VERSION OF YOURSELF</h2>
@@ -101,7 +101,7 @@ export const Home = ({ setFilter }) => {
             <button>Subscribe</button>
           </span>
           <div className="image">
-            <img src={"assets/homeImage2.jpg"} alt="home page" />
+            <img src={"./assets/homeImage2.jpg"} alt="home page" />
           </div>
         </div>
       </div>

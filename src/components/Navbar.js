@@ -43,7 +43,7 @@ export const Navbar = ({ items, setFilter }) => {
         </LeftContainer>
         <RightContainer>
           <NavbarLinksContainer>
-            <NavbarLink to="/Version1-supplement-site">Home</NavbarLink>
+            <NavbarLink to="/Version1-supplement-site/">Home</NavbarLink>
             <NavbarLink
               to="/Version1-supplement-site/supplements"
               onClick={() => setFilter("all")}
@@ -63,7 +63,7 @@ export const Navbar = ({ items, setFilter }) => {
       {extendNavbar && (
         <NavbarExtended>
           <NavbarLinkExtended
-            to="/Version1-supplement-site"
+            to="/Version1-supplement-site/"
             onClick={() => setExtendNavbar(false)}
           >
             Home

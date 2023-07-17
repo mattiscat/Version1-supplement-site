@@ -4,7 +4,7 @@ const Data = [
     name: "Blue Raspberry Pre-workout",
     price: 44.99,
     category: "pre-workout",
-    image: "/assets/pre-product1.png",
+    image: "./assets/pre-product1.png",
     quantity: 0,
   },
   {
@@ -12,7 +12,7 @@ const Data = [
     name: "Stim Free Pre-workout",
     price: 39.99,
     category: "pre-workout",
-    image: "/assets/pre-product2.jpeg",
+    image: "./assets/pre-product2.jpeg",
     quantity: 0,
   },
   {
@@ -20,7 +20,7 @@ const Data = [
     name: "High Stim Pre-workout",
     price: 49.99,
     category: "pre-workout",
-    image: "/assets/pre-product3.webp",
+    image: "./assets/pre-product3.webp",
     quantity: 0,
   },
   {
@@ -28,7 +28,7 @@ const Data = [
     name: "Cookies & Cream Protein",
     price: 49.99,
     category: "protein",
-    image: "/assets/protein-product1.webp",
+    image: "./assets/protein-product1.webp",
     quantity: 0,
   },
   {
@@ -36,7 +36,7 @@ const Data = [
     name: "Vanilla Milkshake Protein",
     price: 49.99,
     category: "protein",
-    image: "/assets/protein-product2.webp",
+    image: "./assets/protein-product2.webp",
     quantity: 0,
   },
   {
@@ -44,7 +44,7 @@ const Data = [
     name: "Vegan Mexican Chocolate Protein",
     price: 44.99,
     category: "protein",
-    image: "/assets/protein-product3.png",
+    image: "./assets/protein-product3.png",
     quantity: 0,
   },
   {
@@ -52,7 +52,7 @@ const Data = [
     name: "Variety Pack Protein Bars",
     price: 29.99,
     category: "protein",
-    image: "/assets/protein-product4.webp",
+    image: "./assets/protein-product4.webp",
     quantity: 0,
   },
   {
@@ -60,7 +60,7 @@ const Data = [
     name: "Watermelon Aminos",
     price: 34.99,
     category: "aminos",
-    image: "/assets/aminos-product1.webp",
+    image: "./assets/aminos-product1.webp",
     quantity: 0,
   },
   {
@@ -68,7 +68,7 @@ const Data = [
     name: "Pineapple Aminos",
     price: 34.99,
     category: "aminos",
-    image: "/assets/aminos-product2.jpg",
+    image: "./assets/aminos-product2.jpg",
     quantity: 0,
   },
   {
@@ -76,7 +76,7 @@ const Data = [
     name: "Unflavored Aminos",
     price: 35.99,
     category: "Aminos",
-    image: "/assets/aminos-product3.webp",
+    image: "./assets/aminos-product3.webp",
     quantity: 0,
   },
   {
@@ -84,7 +84,7 @@ const Data = [
     name: "Creatine Monohydrate",
     price: 39.99,
     category: "creatine",
-    image: "/assets/creatine-product1.webp",
+    image: "./assets/creatine-product1.webp",
     quantity: 0,
   },
 ];
